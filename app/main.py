@@ -14,7 +14,12 @@ from app.routers import (
     notification_jobs_router,
     poll_router,
     todos_router,
+<<<<<<< HEAD
     audit_router,
+=======
+    n8n_test_router,
+    workflows_router,
+>>>>>>> dcba52ad70cc8d08f7f507e4aa7ad2c4191d6646
 )
 
 
@@ -54,8 +59,13 @@ app.include_router(documents_router, prefix=PREFIX)
 app.include_router(todos_router, prefix=PREFIX)
 app.include_router(poll_router, prefix=PREFIX)
 app.include_router(admin_router, prefix=PREFIX)
+<<<<<<< HEAD
 app.include_router(notification_jobs_router, prefix=PREFIX)
 app.include_router(audit_router, prefix=PREFIX)
+=======
+app.include_router(n8n_test_router, prefix=PREFIX)
+app.include_router(workflows_router, prefix=PREFIX)
+>>>>>>> dcba52ad70cc8d08f7f507e4aa7ad2c4191d6646
 
 
 @app.get("/api/v1/health", tags=["health"])
